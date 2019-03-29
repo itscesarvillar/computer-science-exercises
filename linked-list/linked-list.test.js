@@ -4,8 +4,8 @@ describe('LinkedList', () => {
 	it('should append node to linked list', () => {
 		const linkedList = new LinkedList();
 
-		expect(linkedList.head.value).toBeNull();
-		expect(linkedList.tail.value).toBeNull();
+		expect(linkedList.head).toBeNull();
+		expect(linkedList.tail).toBeNull();
 
 		linkedList.append(1);
 		linkedList.add(2);
