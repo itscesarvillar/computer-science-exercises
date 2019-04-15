@@ -2,7 +2,7 @@ const LinkedList = require('./linked-list');
 
 describe('LinkedList', () => {
   it('should append node to linked list', () => {
-    const linkedList = new LinkedList();
+    const linkedList = LinkedList();
 
     //expect(linkedList.head).toEqual({ next: linkedList.tail, value: null });
     expect(linkedList.head).toEqual({ next: null, value: null });

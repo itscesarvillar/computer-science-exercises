@@ -1,10 +1,10 @@
 function LinkedList() {
-  const head = new ListItemLinkedList(null);
-  const tail = new ListItemLinkedList(null);
+  const head = ListItemLinkedList(null);
+  const tail = ListItemLinkedList(null);
   let fakeTail;
 
   function append(value) {
-    const newListItem = new ListItemLinkedList(value);
+    const newListItem = ListItemLinkedList(value);
 
     if (head.value === null) {
       // head = newListItem
@@ -42,7 +42,7 @@ function LinkedList() {
 
   return {
     head, // This is the unique reference that
-    // the user of new LinkedList() has so it cannot change,
+    // the user of LinkedList() has so it cannot change,
     // we just need to update the inner values!
     tail,
     append,
