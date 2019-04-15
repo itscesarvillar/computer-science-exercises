@@ -34,6 +34,22 @@ function LinkedList() {
     }
   }
 
+  function toString() {
+    let string = '(';
+    //Si la lista esta vacia
+    if (!head.next) {
+      string = 'Lista vacía';
+    } else {
+      let ref = head;
+      while (ref) {
+        string = `${string + ref.value},`;
+        ref = ref.next;
+      }
+      //string = string.slice(0, string.length - 1);
+      string = string.slice(0, -1).concat(')');
+    }
+    return string;
+  }
   /**
    * Since I cannot write 'head =' or 'tail =' (that is changing the reference)
    * I need to mutate head values or tail values,
@@ -46,7 +62,8 @@ function LinkedList() {
     // we just need to update the inner values!
     tail,
     append,
-    add: append
+    add: append,
+    toString
   };
 }
 

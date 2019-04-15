@@ -1,14 +1,25 @@
 {
-	"name": "linked-list",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "jest"
-	},
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"jest": "^24.5.0"
-	}
+  "name": "linked-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.5.0",
+    "jest-nyan-reporter": "^1.0.2"
+  },
+  "jest": {
+    "reporters": [
+      [
+        "jest-nyan-reporter",
+        {
+          "suppressErrorReporter": false
+        }
+      ]
+    ]
+  }
 }

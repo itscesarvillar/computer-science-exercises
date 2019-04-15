@@ -24,4 +24,14 @@ describe('LinkedList', () => {
     expect(linkedList.tail.value).toBe(2);
     expect(linkedList.tail.next).toBeNull();
   });
+
+  it('should have a toString method that prints all the values', () => {
+    const linkedList = LinkedList();
+    linkedList.append(1);
+    linkedList.append(1);
+    linkedList.append(12);
+    linkedList.append(99);
+
+    expect(linkedList.toString()).toBe('(1,1,12,99)');
+  });
 });
